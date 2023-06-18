@@ -47,7 +47,7 @@ class Chatbox {
         this.messages.push(msg1);
         console.log(text1)
 
-        fetch('http://127.0.0.1:8000/app/chat-link', {
+        fetch('https://127.0.0.1:8000/app/chat-link', {
             method: 'POST',
             body : JSON.stringify({ message: text1 }),
             mode : "cors",
