@@ -1,12 +1,12 @@
 import json
 import numpy as np
-from healthchatbot.utils import tokenize, stemmingg, words_container
+from utils import tokenize, stemmingg, words_container
 import torch
 import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-from healthchatbot.model import NeuralNet
+from model import NeuralNet
 
-with open("healthchatbot/datafile.json", 'r') as f:
+with open("datafile.json", 'r') as f:
     data_words = json.load(f)
 
 all_words = []
@@ -98,7 +98,7 @@ data = {
     'tags' : tags
 }
 
-FILE = "healthchatbot/trained_weights.pth"
+FILE = "trained_weights.pth"
 torch.save(data, FILE)
 
 print(f"training complete, data saved in the {FILE} file")
